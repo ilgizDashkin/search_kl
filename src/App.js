@@ -88,11 +88,19 @@ export default function App() {
     })
   }
 
-  //выбираем сортировку от пс рп тп
+  //устанавливаем в стейт значение ввода
   const handleChange = (event) => {
     setState({
       ...state,
       query: event.target.value
+    })
+  }
+
+  //устанавливаем в стейт значение выбора из списка в компоненте FreeSolo
+  const setValue = (event) => {
+    setState({
+      ...state,
+      query: event
     })
   }
 
@@ -114,9 +122,9 @@ export default function App() {
     return res_arr
   }
 
-
+// Context.Provider нужен чтоб передать функции изменения стейта в компонент
   return (
-    <Context.Provider value={handleChange}>
+    <Context.Provider value={{handleChange,setValue}}>
     <View activePanel="main">
       <Panel id="main">
         <PanelHeader>поиск КЛ</PanelHeader>
