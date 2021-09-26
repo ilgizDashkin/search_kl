@@ -132,10 +132,10 @@ export default function App() {
         <div className="container text-center">
           <div className='container p-2'>
             <a type="button" className="btn btn-danger btn-lg btn-block" href='https://ilgiz.h1n.ru/index.php'>на главную</a>
-            <FreeSolo/>
+            <FreeSolo/><br></br>
             {/* <Search value={state.query} onChange={handleChange} placeholder='введите КЛ, не менее 3 символов' /> */}
             
-            <button className='btn btn-info btn-lg btn-block' onClick={requestData}>поиск</button>
+            <button className='btn btn-info btn-lg btn-block' onClick={requestData}>поиск</button><br></br>
             <select className="form-control"
               onChange={_onChange}>
               <option value="">по замеру</option>
