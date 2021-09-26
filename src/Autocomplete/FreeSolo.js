@@ -10,7 +10,7 @@ const [options, setOptions] = React.useState(name_kl);
 const {handleChange,setValue}=useContext(Context)//передаю функции изменения стейта с помощью контекста
 
   return (
-    <div style={{ width: 300 }}>
+    <div style={{ width: 500 }}>
       <Autocomplete
         id="free-solo-demo"
         freeSolo

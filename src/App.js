@@ -127,12 +127,14 @@ export default function App() {
     <Context.Provider value={{handleChange,setValue}}>
     <View activePanel="main">
       <Panel id="main">
-        <PanelHeader>поиск КЛ</PanelHeader>
-        <div className="container bg-dark text-center text-white">
+        {/* <PanelHeader>поиск КЛ</PanelHeader> */}
+        {/* <div className="container bg-dark text-center text-white"> */}
+        <div className="container text-center">
           <div className='container p-2'>
             <a type="button" className="btn btn-danger btn-lg btn-block" href='https://ilgiz.h1n.ru/index.php'>на главную</a>
-            <Search value={state.query} onChange={handleChange} placeholder='введите КЛ, не менее 3 символов' />
-            <FreeSolo onChange={handleChange} />
+            <FreeSolo/>
+            {/* <Search value={state.query} onChange={handleChange} placeholder='введите КЛ, не менее 3 символов' /> */}
+            
             <button className='btn btn-info btn-lg btn-block' onClick={requestData}>поиск</button>
             <select className="form-control"
               onChange={_onChange}>
